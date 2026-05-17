@@ -57,19 +57,19 @@ Key parameters at the top of `ILC_DPD_PlutoSDR.m`:
 
 Convergence (NMSE vs iteration):
 
-![Convergence](ILC_DPD_Convergence.PNG)
+![Convergence](images/ILC_DPD_Convergence.PNG)
 
 AM-AM, before vs after ILC-DPD:
 
-![AM-AM](ILC_DPD_AMAM.PNG)
+![AM-AM](images/ILC_DPD_AMAM.PNG)
 
 Output spectrum:
 
-![Spectrum](Spectrum.PNG)
+![Spectrum](images/Spectrum.PNG)
 
-Per-iteration learning (animation of `ilc_iter_01..10`):
+Per-iteration learning (animation):
 
-![ILC iterations](ilc_convergence.gif)
+![ILC iterations](images/ilc_convergence.gif)
 
 ## Repository contents
 
@@ -77,12 +77,10 @@ Per-iteration learning (animation of `ilc_iter_01..10`):
 |------|-------------|
 | `ILC_DPD_PlutoSDR.m` | Main script (ILC loop + `captureAndSync` + Farrow resampler) |
 | `RefSignal.mat` | Reference waveform |
-| `ILC_DPD_Convergence.PNG` | NMSE convergence plot |
-| `ILC_DPD_AMAM.PNG` | AM-AM before/after |
-| `Spectrum.PNG` | Output spectrum |
-| `ilc_iter_01..10.png` | Per-iteration snapshots |
-| `ilc_convergence.gif` | Animation of the iterations |
-| `make_gif.m` | Regenerates the GIF from the per-iteration PNGs |
+| `images/ILC_DPD_Convergence.PNG` | NMSE convergence plot |
+| `images/ILC_DPD_AMAM.PNG` | AM-AM before/after |
+| `images/Spectrum.PNG` | Output spectrum |
+| `images/ilc_convergence.gif` | Animation of the per-iteration learning |
 | `LICENSE` | MIT license |
 
 ## Algorithm reference
