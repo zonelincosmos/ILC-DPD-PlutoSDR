@@ -5,6 +5,24 @@ real **ADALM-Pluto** SDR in a hardware-in-loop TX→RX loopback. The predistorte
 waveform is learned sample-by-sample directly from measurements — no PA model,
 no basis functions, no coefficient fitting.
 
+## Results
+
+Per-iteration learning (animation):
+
+<img src="images/ilc_convergence.gif" width="480">
+
+Convergence (NMSE vs iteration):
+
+<img src="images/ILC_DPD_Convergence.PNG" width="480">
+
+AM-AM, before vs after ILC-DPD:
+
+<img src="images/ILC_DPD_AMAM.PNG" width="480">
+
+Output spectrum:
+
+<img src="images/Spectrum.PNG" width="480">
+
 ## How it works
 
 Start with the predistorter input equal to the reference, `P_0 = x`. Each
@@ -25,8 +43,7 @@ iteration:
    where `T = G_target * x` is the desired linear output and `M_avg` is the
    averaged measured output.
 
-The error to the ideal linear response (NMSE) is logged each iteration, and a
-per-iteration figure (`ilc_iter_kk.png`) is saved.
+The error to the ideal linear response (NMSE) is logged each iteration.
 
 ## Requirements
 
@@ -53,34 +70,13 @@ Key parameters at the top of `ILC_DPD_PlutoSDR.m`:
 | `N_avg` | I/Q averaged captures per iteration | 16 |
 | `n_iter` | ILC iterations | 10 |
 
-## Results
-
-Convergence (NMSE vs iteration):
-
-![Convergence](images/ILC_DPD_Convergence.PNG)
-
-AM-AM, before vs after ILC-DPD:
-
-![AM-AM](images/ILC_DPD_AMAM.PNG)
-
-Output spectrum:
-
-![Spectrum](images/Spectrum.PNG)
-
-Per-iteration learning (animation):
-
-![ILC iterations](images/ilc_convergence.gif)
-
 ## Repository contents
 
 | File | Description |
 |------|-------------|
 | `ILC_DPD_PlutoSDR.m` | Main script (ILC loop + `captureAndSync` + Farrow resampler) |
 | `RefSignal.mat` | Reference waveform |
-| `images/ILC_DPD_Convergence.PNG` | NMSE convergence plot |
-| `images/ILC_DPD_AMAM.PNG` | AM-AM before/after |
-| `images/Spectrum.PNG` | Output spectrum |
-| `images/ilc_convergence.gif` | Animation of the per-iteration learning |
+| `images/` | Result figures and the convergence animation |
 | `LICENSE` | MIT license |
 
 ## Algorithm reference
