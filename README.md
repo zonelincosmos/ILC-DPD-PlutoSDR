@@ -9,19 +9,19 @@ no basis functions, no coefficient fitting.
 
 Per-iteration learning (animation):
 
-<img src="images/ilc_convergence.gif" width="480">
+<img src="images/ilc_convergence.gif" width="640">
 
 Convergence (NMSE vs iteration):
 
-<img src="images/ILC_DPD_Convergence.PNG" width="480">
+<img src="images/ILC_DPD_Convergence.PNG" width="640">
 
 AM-AM, before vs after ILC-DPD:
 
-<img src="images/ILC_DPD_AMAM.PNG" width="480">
+<img src="images/ILC_DPD_AMAM.PNG" width="640">
 
 Output spectrum:
 
-<img src="images/Spectrum.PNG" width="480">
+<img src="images/Spectrum.PNG" width="640">
 
 ## How it works
 
